@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Lab4App.Models.Lab4;
 
 namespace Lab4App.Models
 {
@@ -24,10 +25,15 @@ namespace Lab4App.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+        public DbSet<Province> Provinces { get; set; }
+        public DbSet<City> Cities { get; set; }
+
 
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
     }
+
+   
 }

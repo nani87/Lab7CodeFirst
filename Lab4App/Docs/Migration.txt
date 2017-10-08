@@ -1,0 +1,7 @@
+﻿Enable-Migrations -ContextTypeName ApplicationDbContext -MigrationsDirectory Migrations\Identity
+
+add-migration -ConfigurationTypeName Lab4App.Migrations.Identity.Configuration "InitialCreate"
+
+update-database -ConfigurationTypeName Lab4App.Migrations.Identity.Configuration
+
+add-migration -ConfigurationTypeName Lab4App.Migrations.Identity.Configuration "Fixing iD"
